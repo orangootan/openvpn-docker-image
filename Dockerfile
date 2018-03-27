@@ -1,6 +1,7 @@
-FROM alpine:3.6
-RUN apk add openvpn=2.4.4-r1 \
-    --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
+FROM alpine:3.7
+RUN apk upgrade --no-cache
+RUN apk add openvpn=2.4.5-r0 \
+    --repository https://nl.alpinelinux.org/alpine/edge/main \
     --no-cache
 #VOLUME /etc/openvpn
 ENTRYPOINT ["openvpn"]
