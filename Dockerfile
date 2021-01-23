@@ -1,6 +1,6 @@
-FROM alpine:3.12.0
+FROM alpine:3.13.0
 RUN apk upgrade --no-cache
-RUN apk add openvpn=2.4.9-r0 \
+RUN apk add openvpn=2.5.0-r1 \
     --repository https://nl.alpinelinux.org/alpine/edge/main \
     --no-cache
 #VOLUME /etc/openvpn
